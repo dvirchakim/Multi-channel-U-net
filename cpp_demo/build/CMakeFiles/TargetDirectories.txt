@@ -1,0 +1,3 @@
+/home/axelera/dvir/Gilat_Project/simple net/phase_three/cpp_demo/build/CMakeFiles/multichannel_demo.dir
+/home/axelera/dvir/Gilat_Project/simple net/phase_three/cpp_demo/build/CMakeFiles/edit_cache.dir
+/home/axelera/dvir/Gilat_Project/simple net/phase_three/cpp_demo/build/CMakeFiles/rebuild_cache.dir

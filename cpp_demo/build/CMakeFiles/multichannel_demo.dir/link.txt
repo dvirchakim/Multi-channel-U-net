@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/multichannel_demo.dir/multichannel_demo.cpp.o -o multichannel_demo   -L/home/axelera/dvir/voyager-sdk/lib  -Wl,-rpath,/home/axelera/dvir/voyager-sdk/lib -laxinferencenet -laxruntime -lpthread

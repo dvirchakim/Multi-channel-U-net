@@ -1,0 +1,24 @@
+# Python artifacts
+__pycache__/
+*.py[cod]
+*.pkl
+*.pt
+*.pth
+*.onnx
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# Axelera compiled outputs
+models/compiled_multichannel_unet/
+
+# Training/experiment outputs
+results/
+*.png
+*.log
+
+# OS metadata
+.DS_Store
+Thumbs.db
