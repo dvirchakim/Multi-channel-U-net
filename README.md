@@ -105,31 +105,10 @@ phase_three/
     └── training_history.png
 ```
 
-## Key Differences from Phase 2
-
-### Model Changes
-- **Input channels**: 2 → 32 (16x increase)
-- **Base filters**: 32 → 64 (2x increase)
-- **Parameters**: ~500K → ~2.5M (5x increase)
-- **Batch size**: 32 → 16 (reduced for memory)
-
-### Visualization Changes
-- **Channel selector**: Interactive slider for 16 channels
-- **Keyboard navigation**: Arrow keys to switch channels
-- **Multi-channel stats**: Per-channel performance tracking
-- **Enhanced UI**: Channel-specific titles and indicators
-
-## Performance Expectations
-
-### Training
-- **Time**: ~5-10 minutes for 100 epochs (with early stopping)
-- **Memory**: ~4-6 GB GPU/RAM
-- **Convergence**: Typically within 20-30 epochs
 
 ### Inference
 - **PyTorch (CPU)**: ~50-100 FPS
-- **Axelera NPU**: ~1000-2000 FPS
-- **Expected speedup**: 10-20x
+- **Axelera NPU**: ~700(python)-5000(c++) FPS
 
 ### Accuracy
 - **Correlation**: >0.999 (very high similarity)
@@ -174,20 +153,6 @@ Output:
 
 ## Troubleshooting
 
-### Training Issues
-- **Out of memory**: Reduce batch size to 8 or 4
-- **Slow convergence**: Increase learning rate to 0.002
-- **Overfitting**: Increase dropout rate to 0.2
-
-### Compilation Issues
-- **ONNX export fails**: Check PyTorch model loads correctly
-- **NPU compilation fails**: Verify input shape is `1,32,5120,1`
-- **Manifest missing**: Ensure compilation completed successfully
-
-### Visualization Issues
-- **AxRuntime not found**: Activate Voyager SDK environment
-- **Slow FPS**: Reduce visualization update rate
-- **Channel out of range**: Use slider or arrow keys (0-15)
 
 ## Next Steps
 
@@ -198,23 +163,5 @@ Output:
 
 ### Extensions
 1. **More channels**: Extend to 32 or 64 IQ channels
-2. **Different tasks**: Classification, detection, filtering
-3. **Real data**: Replace synthetic data with actual IQ samples
+2. **Real data**: Replace synthetic data with actual IQ samples
 
-## References
-
-- Phase 2: Single-channel IQ processing (2 channels)
-- Axelera SDK: Voyager v1.4+
-- U-Net: Original paper by Ronneberger et al.
-
-## Support
-
-For issues or questions:
-1. Check Phase 2 implementation for reference
-2. Review Axelera SDK documentation
-3. Verify all dependencies are installed
-4. Check model shapes and data formats
-
----
-
-**Phase 3 Status**: ✓ Complete and ready for deployment
